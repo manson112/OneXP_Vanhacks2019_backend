@@ -98,7 +98,7 @@ router.post('/api/v1/get/pet', function(req, res, next) {
 });
 
 router.get('/api/dummy', function(req, res, next){
-  for(let i=1; i<10; i++) {
+  for(let i=0; i<spcas.length; i++) {
     db.collection("SPCA").add(
       spcas[i]
     ).then(ref => {
