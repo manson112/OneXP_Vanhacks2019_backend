@@ -1,6 +1,8 @@
 var express = require('express');
 const admin = require('firebase-admin');
 const pets = require('../dummy');
+const vols = require('../dummyVol');
+
 
 let serviceAccount = require('../firebase/serviceAccountKey.json');
 
@@ -120,7 +122,11 @@ router.get('/api/spca/add', function(req, res, next){
 });
 
 router.get('/get/vol/add', function(req, res, next) {
-  
+  for(let i=0; i<vols.length; i++) {
+    db.collection("Volunteers").add(vols[i]).then(ref => {
+      console.log("Added document with ID: ", ref.id);
+    });
+  }
 })
 
 module.exports = router;
