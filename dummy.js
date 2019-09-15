@@ -12,7 +12,8 @@ module.exports = [
         "likesToWalkWith": "Daniel",
         "allergies": "Nuts",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "BBB",
@@ -27,7 +28,8 @@ module.exports = [
         "likesToWalkWith": "Jihyo",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "CCC",
@@ -42,7 +44,8 @@ module.exports = [
         "likesToWalkWith": "Wayne",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "DDD",
@@ -57,7 +60,8 @@ module.exports = [
         "likesToWalkWith": "John",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "EEE",
@@ -72,7 +76,8 @@ module.exports = [
         "likesToWalkWith": "Brian",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "FFF",
@@ -87,7 +92,8 @@ module.exports = [
         "likesToWalkWith": "Victor",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "GGG",
@@ -102,7 +108,8 @@ module.exports = [
         "likesToWalkWith": "Kevin",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "HHH",
@@ -117,7 +124,8 @@ module.exports = [
         "likesToWalkWith": "Albert",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "III",
@@ -132,7 +140,8 @@ module.exports = [
         "likesToWalkWith": "Justin",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       },
       {
         "name" : "JJJ",
@@ -147,6 +156,7 @@ module.exports = [
         "likesToWalkWith": "Choi",
         "allergies": "",
         "notes": "",
-        "map": ""
+        "map": "",
+        "walking":false
       }
 ];
