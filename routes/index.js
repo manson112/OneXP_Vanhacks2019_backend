@@ -2,7 +2,7 @@ var express = require('express');
 const admin = require('firebase-admin');
 const pets = require('../dummy');
 const vols = require('../dummyVol');
-
+const spcas = require('../dummySPCA');
 
 let serviceAccount = require('../firebase/serviceAccountKey.json');
 
@@ -78,7 +78,6 @@ router.post('/api/v1/get/spca', function(req, res, next) {
 
 router.post('/api/v1/get/pet', function(req, res, next) {
   const spcaID = req.body.spcaID;
-
   const result = [];
   db.collection("SPCA").doc(spcaID).collection("PET").get().then((snapshot) => {
     let count = 0;
@@ -98,35 +97,24 @@ router.post('/api/v1/get/pet', function(req, res, next) {
   });
 });
 
-router.get('/api/dummy', function(req, res, next) {
-
-  for(let i=0; i<pets.length; i++) {
-    db.collection("SPCA").doc("b8rHZLCBF4eGj7VAAw94").collection("PET").add(
-      pets[i]
-    ).then(ref => {
-      console.log("Added document with ID: ", ref.id);
-    });
-  }
-  
-});
-
-router.get('/api/spca/add', function(req, res, next){
+router.get('/api/dummy', function(req, res, next){
   for(let i=1; i<10; i++) {
-    db.collection("SPCA").add({
-          name: "SPCA" + i
-      }).then(ref => {
-        console.log("Added document with ID: ", ref.id);
+    db.collection("SPCA").add(
+      spcas[i]
+    ).then(ref => {
+        for(let j=0; j<pets.length; j++) {
+          ref.collection("PET").add(
+            pets[j]
+          )
+        }
       });
   }
-  res.send("dfdf");
-});
-
-router.get('/get/vol/add', function(req, res, next) {
   for(let i=0; i<vols.length; i++) {
     db.collection("Volunteers").add(vols[i]).then(ref => {
       console.log("Added document with ID: ", ref.id);
     });
   }
-})
+  res.send("dfdf");
+});
 
 module.exports = router;
