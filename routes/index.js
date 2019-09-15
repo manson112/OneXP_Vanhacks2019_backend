@@ -102,6 +102,7 @@ router.get('/api/dummy', function(req, res, next){
     db.collection("SPCA").add(
       spcas[i]
     ).then(ref => {
+        console.log(ref);
         for(let j=0; j<pets.length; j++) {
           ref.collection("PET").add(
             pets[j]
